@@ -69,3 +69,12 @@ This project demonstrates the potential of using CCT for medical image classific
 3. **Download and unzip the dataset files (benign.zip and malignant.zip). Place them in a folder named 'Colonoscopy Images 3' (or your chosen name).**
 4. **Install required libraries.**
 5. **Run the Jupyter Notebook and follow the instructions within.**
+
+## Computational Resources
+This project was developed and trained using a paid Google Colab environment, which provided access to enhanced computational resources, including:
+
+- **Higher RAM:** Essential for handling large datasets and high-resolution images.
+- **Better GPU:** Access to more powerful GPUs enabled faster processing and the ability to handle higher-resolution images effectively.
+## Implications for Replication
+If you're replicating this project using a standard (free) Google Colab environment or a local setup, you might need to adjust certain parameters, such as image resolution, to accommodate the available computational resources.
+Alternatively, consider using a paid Colab subscription or a similarly equipped environment to replicate the results as obtained in this project.
