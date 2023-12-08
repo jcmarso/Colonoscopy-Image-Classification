@@ -3,7 +3,7 @@
 This project aims to classify colonoscopy images into two categories: benign and malignant. The classification is crucial in medical diagnostics to identify potential adenomas, serrated adenomas, and hyperplastic conditions in colonoscopy images. We utilize a Compact Convolutional Transformer (CCT) model for this task, leveraging its efficient design for image recognition.
 
 ## Dataset
-The dataset was obtained from the UAH Colonoscopy Dataset. The original dataset includes 80 adenomas, 30 serrated adenomas, and 42 hyperplastic images. These images were manually downloaded using [BeautifulSoup](https://pypi.org/project/beautifulsoup4/) for web scraping. The original images had dimensions of 768x576 pixels and contained extraneous elements like letters, menu windows, dark margins, and medical tools.
+The dataset was obtained from the [UAH](https://www.depeca.uah.es/) Colonoscopy Dataset. The original dataset includes 80 adenomas, 30 serrated adenomas, and 42 hyperplastic images. These images were manually downloaded using [BeautifulSoup](https://pypi.org/project/beautifulsoup4/) for web scraping. The original images had dimensions of 768x576 pixels and contained extraneous elements like letters, menu windows, dark margins, and medical tools.
 
 Preprocessing Steps
 Image Editing: Using GIMP, each image was cropped to 480x360 pixels to remove unwanted content.
