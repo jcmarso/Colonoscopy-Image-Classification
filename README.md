@@ -6,7 +6,7 @@ This project aims to classify colonoscopy images into two categories: benign and
 The dataset was obtained from the [UAH Colonoscopy Dataset](https://www.depeca.uah.es/colonoscopy_dataset/) . The original dataset includes 80 adenomas, 30 serrated adenomas, and 42 hyperplastic images. These images were manually downloaded using [BeautifulSoup](https://pypi.org/project/beautifulsoup4/) for web scraping. The original images had dimensions of 768x576 pixels and contained extraneous elements like letters, menu windows, dark margins, and medical tools.
 
 ### Preprocessing Steps
-- **Image Editing:** Using GIMP, each image was cropped to 480x360 pixels to remove unwanted content.
+- **Image Editing:** Using [GIMP](https://www.gimp.org/), each image was cropped to 480x360 pixels to remove unwanted content.
 - **Data Augmentation:** To balance the dataset, the 42 hyperplastic images (classified as benign) were flipped vertically and horizontally, resulting in 126 images. To achieve a balanced dataset, 16 flipped images were manually removed, resulting in 110 benign images.
 - **Data Organization:** The images were categorized into two folders: 'benign' (hyperplastic images) and 'malignant' (adenomas and serrated adenomas), leading to a balanced dataset of 110 images in each category.
 ### CCT Model
