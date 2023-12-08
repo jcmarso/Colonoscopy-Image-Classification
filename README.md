@@ -1,7 +1,7 @@
 # Colonoscopy-Image-Classification
-Colonoscopy Images Classification using a Compact Convolutional Transformers (CCT)
+## Colonoscopy Images Classification using a Compact Convolutional Transformers (CCT)
 
-##Colonoscopy Image Classification Using CCT
+Colonoscopy Image Classification Using CCT
 Project Overview
 This project aims to classify colonoscopy images into two categories: benign and malignant. The classification is crucial in medical diagnostics to identify potential adenomas, serrated adenomas, and hyperplastic conditions in colonoscopy images. We utilize a Compact Convolutional Transformer (CCT) model for this task, leveraging its efficient design for image recognition.
 
