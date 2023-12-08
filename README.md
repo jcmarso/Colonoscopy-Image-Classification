@@ -1,12 +1,9 @@
-# Colonoscopy-Image-Classification
-## Colonoscopy Images Classification using a Compact Convolutional Transformers (CCT)
-
-Colonoscopy Image Classification Using CCT
-Project Overview
+# Colonoscopy Image Classification Using CCT
+## Project Overview
 This project aims to classify colonoscopy images into two categories: benign and malignant. The classification is crucial in medical diagnostics to identify potential adenomas, serrated adenomas, and hyperplastic conditions in colonoscopy images. We utilize a Compact Convolutional Transformer (CCT) model for this task, leveraging its efficient design for image recognition.
 
-Dataset
-The dataset was obtained from the UAH Colonoscopy Dataset. The original dataset includes 80 adenomas, 30 serrated adenomas, and 42 hyperplastic images. These images were manually downloaded using BeautifulSoup for web scraping. The original images had dimensions of 768x576 pixels and contained extraneous elements like letters, menu windows, dark margins, and medical tools.
+## Dataset
+The dataset was obtained from the UAH Colonoscopy Dataset. The original dataset includes 80 adenomas, 30 serrated adenomas, and 42 hyperplastic images. These images were manually downloaded using [BeautifulSoup](https://pypi.org/project/beautifulsoup4/) for web scraping. The original images had dimensions of 768x576 pixels and contained extraneous elements like letters, menu windows, dark margins, and medical tools.
 
 Preprocessing Steps
 Image Editing: Using GIMP, each image was cropped to 480x360 pixels to remove unwanted content.
@@ -34,35 +31,25 @@ Image Size Reduction: Original images were reduced from 480x360 to 256x256 for c
 Data Augmentation Removal: Certain augmentations (RandomPerspective and RandomGrayscale) were removed after observing that they did not significantly contribute to the model's performance.
 Balanced Dataset: Class weights were initially used but later removed after balancing the dataset through augmentation and manual editing.
 Results and Metrics
-The model was evaluated using metrics such as accuracy, precision, recall, and F1 score. Here's a summary of the performance over epochs:
+The model's performance was evaluated using metrics such as accuracy, precision, recall, and F1 score. Here's a summary of the performance over epochs:
 
 Epoch 1: Accuracy: 47.73%, Precision: 0.48, Recall: 0.45, F1 Score: 0.47
-Epoch 2: Accuracy: 47.73%, Precision: 0.48, Recall: 0.50, F1 Score: 0.49
-Epoch 3: Accuracy: 50.00%, Precision: 0.50, Recall: 0.45, F1 Score: 0.48
-Epoch 4: Accuracy: 50.00%, Precision: 0.50, Recall: 0.50, F1 Score: 0.50
-Epoch 5: Accuracy: 54.55%, Precision: 0.55, Recall: 0.55, F1 Score: 0.55
-Epoch 6: Accuracy: 61.36%, Precision: 0.61, Recall: 0.64, F1 Score: 0.62
-Epoch 7: Accuracy: 40.91%, Precision: 0.39, Recall: 0.32, F1 Score: 0.35
-Epoch 8: Accuracy: 50.00%, Precision: 0.50, Recall: 0.45, F1 Score: 0.48
-Epoch 9: Accuracy: 50.00%, Precision: 0.50, Recall: 0.45, F1 Score: 0.48
-Epoch 10: Accuracy: 50.00%, Precision: 0.50, Recall: 0.45, F1 Score: 0.48
+...
 Epoch 11: Accuracy: 52.27%, Precision: 0.52, Recall: 0.50, F1 Score: 0.51
 Early stopping was triggered after the 11th epoch.
-Interpretation of Results
-The model showed a gradual improvement in accuracy and F1 score over the initial epochs, peaking at epoch 6. The precision and recall metrics fluctuated, reflecting the model's varying ability to correctly identify positive cases across epochs. Early stopping was triggered after the 11th epoch, suggesting that the model had begun to overfit or ceased to make significant learning progress.
-
 Confusion Matrices
-The confusion matrices for each epoch provided insights into the model's performance regarding false positives and false negatives. Here are a few notable confusion matrices:
-
-Epoch 1: [[11 11] [12 10]]
-Epoch 5: [[12 10] [10 12]]
-Epoch 6: [[13 9] [ 8 14]] (Best performance)
-Epoch 11: [[12 10] [11 11]]
-The confusion matrix from Epoch 6 indicates the best balance between true positives and true negatives.
+The confusion matrices for each epoch provided insights into the model's performance regarding false positives and false negatives. For instance, the confusion matrix from Epoch 6 indicates the best balance between true positives and true negatives: [[13 9] [8 14]].
 
 Conclusion and Future Work
 This project demonstrates the potential of using CCT for medical image classification. The model achieved modest performance, with the best results observed in the 6th epoch. Future work could focus on further tuning the model architecture, experimenting with different data augmentation techniques, and possibly exploring ensemble methods to improve accuracy and robustness.
 
-Potential improvements include more extensive data preprocessing, exploring more sophisticated data augmentation techniques, and utilizing a larger and more diverse dataset for training.
-
-
+Setup and Installation
+Requirements
+Python 3.7+
+Required Libraries: PyTorch, torchvision, scikit-learn, numpy, matplotlib, BeautifulSoup4, timm
+Running the Code
+Download the Jupyter Notebook (MVAI_v04_Final_Project.ipynb).
+Download and unzip utils.zip from Compact Transformers (or use the included utils.zip).
+Download and unzip the dataset files (benign.zip and malignant.zip). Place them in a folder named 'Colonoscopy Images 3' (or your chosen name).
+Install required libraries.
+Run the Jupyter Notebook and follow the instructions within.
